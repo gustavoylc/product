@@ -17,7 +17,10 @@ module.exports = {
 	mode: 'development',
 	resolve: {
 		extensions: ['.js', '.jsx'],
-		alias: { '@components': path.resolve(__dirname, 'src/components/') },
+		alias: {
+			'@components': path.resolve(__dirname, 'src/components/'),
+			'@styles': path.resolve(__dirname, 'src/styles/'),
+		},
 	},
 	module: {
 		rules: [
@@ -37,13 +40,8 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(scss|css)$/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					'style-loader',
-					'css-loader',
-					'sass-loader',
-				],
+				test: /\.(sass|scss|css)$/,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
 				test: /\.(png|svg|jpg|gif)$/,
@@ -58,7 +56,7 @@ module.exports = {
 						mimetype: 'application/font-woff',
 						name: '[name].[contenthash].[ext]',
 						outputPath: './assets/fonts/',
-						publicPath: './assets/fonts/',
+						publicPath: '../assets/fonts/',
 						esModule: false,
 					},
 				},
