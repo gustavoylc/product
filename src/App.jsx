@@ -1,8 +1,12 @@
-import '@styles/global.sass'
-import React from 'react'
+import React, { Fragment } from 'react'
+import { NavBar } from '@components/NavBar'
 
 const App = () => {
-	return <div>App</div>
+	return (
+		<Fragment>
+			<NavBar />
+		</Fragment>
+	)
 }
 
 export { App }
