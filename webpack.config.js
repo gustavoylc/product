@@ -22,6 +22,7 @@ module.exports = {
 			'@styles': path.resolve(__dirname, 'src/styles/'),
 			'@fonts': path.resolve(__dirname, 'src/assets/fonts/'),
 			'@images': path.resolve(__dirname, 'src/assets/images/'),
+			'@pages': path.resolve(__dirname, 'src/pages/'),
 		},
 	},
 	module: {

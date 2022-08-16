@@ -1,0 +1,21 @@
+.GetStartedContent
+  margin: 0 10px
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+  grid-template-rows: repeat(3,auto)
+  text-align: center
+  color: $black-primary
+  & h2
+    margin: 0
+    grid-area: 1 / 1 / 2 / 3
+    font-weight: 900   
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    line-height: 1.7
+  & h4    
+    grid-area: 2 / 1 / 3 / 3
+    font-weight: 400
+    line-height: 1.5
+  & a
+    place-self: center
+    color: $blue-primary
+    font-weight: 700
