@@ -15,7 +15,6 @@ const WhyUs = ({children}) => {
 			<img
 				className='WhyUs__end'
 				src={roundup}
-				alt=''
 			/>
 		</section>
 	)

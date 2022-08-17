@@ -10,6 +10,7 @@ import { WhyUs } from '@components/WhyUs'
 import { Skill } from '@components/Skill'
 import { Management } from './components/Management'
 import { Customer } from './components/Customer'
+import { Optimization } from './components/Optimization'
 
 import hero from '@images/hero.png'
 import getjob from '@images/getjob.png'
@@ -18,6 +19,7 @@ import design from '@images/skills/design.svg'
 import preference from '@images/skills/preference.svg'
 import tests from '@images/skills/tests.svg'
 import comfort from '@images/comfort.png'
+import market from '@images/market.png'
 
 const App = () => {
 	return (
@@ -80,6 +82,12 @@ const App = () => {
 						classSize={'Picture'}
 					/>
 				</Customer>
+				<Optimization>
+					<Picture
+						picture={market}
+						classSize={'Picture'}
+					/>
+				</Optimization>
 			</Product>
 		</Fragment>
 	)
