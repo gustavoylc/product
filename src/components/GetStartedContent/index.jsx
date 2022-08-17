@@ -10,8 +10,11 @@ const GetStartedContent = () => {
 				Tools, tutorials, design and innovation experts, all in one place! The
 				most intuitive way to imagine your next user experience
 			</h4>
-      
-			<Button text={'Get started'} />
+
+			<Button
+				text={'Get started'}
+				classSize={'Button'}
+			/>
 			<a href='http://youtube.com'>
 				<MdPlayArrow /> Watch the Video
 			</a>
