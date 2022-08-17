@@ -9,6 +9,7 @@ import { GetStartedContent } from '@components/GetStartedContent'
 import { WhyUs } from '@components/WhyUs'
 import { Skill } from '@components/Skill'
 import { Management } from './components/Management'
+import { Customer } from './components/Customer'
 
 import hero from '@images/hero.png'
 import getjob from '@images/getjob.png'
@@ -16,6 +17,7 @@ import arrow from '@images/skills/arrow.svg'
 import design from '@images/skills/design.svg'
 import preference from '@images/skills/preference.svg'
 import tests from '@images/skills/tests.svg'
+import comfort from '@images/comfort.png'
 
 const App = () => {
 	return (
@@ -72,6 +74,12 @@ const App = () => {
 						classSize={'Picture'}
 					/>
 				</Management>
+				<Customer>
+					<Picture
+						picture={comfort}
+						classSize={'Picture'}
+					/>
+				</Customer>
 			</Product>
 		</Fragment>
 	)
