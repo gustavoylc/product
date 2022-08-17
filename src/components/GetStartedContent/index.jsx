@@ -6,10 +6,10 @@ const GetStartedContent = () => {
 	return (
 		<article className='GetStartedContent'>
 			<h2>Work at the speed of the thought</h2>
-			<h4>
+			<p>
 				Tools, tutorials, design and innovation experts, all in one place! The
 				most intuitive way to imagine your next user experience
-			</h4>
+			</p>
 
 			<Button
 				text={'Get started'}
