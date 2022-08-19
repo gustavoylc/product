@@ -10,7 +10,7 @@ const WhyUs = ({children}) => {
 			{children}
 			<Button
 				text={'SIGN UP NOW'}
-				classSize={'Button Button__SignUp semi-circle2'}
+				classSize={'Button Button__SignUp'}
 			></Button>
 			<img
 				className='WhyUs__end'

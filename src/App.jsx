@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Logo } from '@components/Logo'
 import { Menu } from '@components/Menu'
 import { NavBar } from '@pages/NavBar'
@@ -8,9 +8,11 @@ import { Picture } from '@components/Picture'
 import { GetStartedContent } from '@components/GetStartedContent'
 import { WhyUs } from '@components/WhyUs'
 import { Skill } from '@components/Skill'
-import { Management } from './components/Management'
-import { Customer } from './components/Customer'
-import { Optimization } from './components/Optimization'
+import { Management } from '@components/Management'
+import { Customer } from '@components/Customer'
+import { Optimization } from '@components/Optimization'
+import { ContactExpert } from '@components/ContactExpert'
+import { useGetExperts } from '@hooks/useGetExperts'
 
 import hero from '@images/hero.png'
 import getjob from '@images/getjob.png'
@@ -22,6 +24,7 @@ import comfort from '@images/comfort.png'
 import market from '@images/market.png'
 
 const App = () => {
+	const experts = useGetExperts()	 
 	return (
 		<Fragment>
 			<NavBar>
@@ -88,6 +91,18 @@ const App = () => {
 						classSize={'Picture'}
 					/>
 				</Optimization>
+				<ContactExpert experts={experts}>
+					{/* {todo => (
+						<TodoItem
+							key={todo.text}
+							text={todo.text}
+							completed={todo.completed}
+							onComplete={() => completeTodo(todo.text)}
+							onDelete={() => deleteTodo(todo.text)}
+						/>
+					)} */}
+					
+				</ContactExpert>
 			</Product>
 		</Fragment>
 	)
