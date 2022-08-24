@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Picture = ({ picture, classSize }) => {
+const Picture = ({ picture, classSize='Picture' }) => {
 	return (
 		<figure className='Picture__container'>
 			<img
