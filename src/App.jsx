@@ -16,6 +16,7 @@ import { CardsList } from "@components/CardsList";
 import { useGetExperts } from "@hooks/useGetExperts";
 import { useGetTechImages } from "@hooks/useGetTechImages";
 import { Pricing } from "@components/Pricing";
+import { Marketing } from "@components/Marketing";
 
 import hero from "@images/hero.png";
 import getjob from "@images/getjob.png";
@@ -107,6 +108,7 @@ const App = () => {
 							)
 					)}
 				</Testimonies>
+				<Marketing />
 			</Product>
 		</Fragment>
 	);
