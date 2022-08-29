@@ -1,0 +1,47 @@
+.pricingCard
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+  border-radius: 20px
+  padding: 10px 0 25px 0
+  scroll-snap-align: center
+  &__price
+    display: grid
+    grid-template-columns: 100px 100px
+    grid-template-rows: 40px 40px      
+    place-content: center
+    margin-bottom: 30px    
+    width: 220px
+  &__number
+    font-size: 80px
+    grid-column-start: 1
+    grid-column-end: 2
+    grid-row-start: 1
+    grid-row-end: 3
+    align-self: center
+    justify-self: end
+    margin-right: 10px
+    color: $blue-primary
+    font-weight: 700
+  &__symbol      
+    grid-column-start: 2
+    grid-column-end: 3
+    grid-row-start: 1
+    grid-row-end: 2
+    justify-self: start
+    align-self: center
+    font-size: 25px
+    font-weight: 700
+    color: $blue-primary
+  &__text
+    grid-column-start: 2
+    grid-column-end: 3
+    grid-row-start: 2
+    grid-row-end: 3
+    justify-self: start
+    align-self: center
+    opacity: 50%
+
+.selected
+  background-color:  $blue-primary
+  color: $white-primary
+  & p
+    color: $white-primary
