@@ -2,28 +2,27 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const Dotenv = require('dotenv-webpack')
-/* const CopyPlugin = require('copy-webpack-plugin') */
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
-	entry: './src/index.jsx',
+	entry: "./src/index.jsx",
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
-		publicPath: '/',
-		assetModuleFilename: 'assets/images/[hash][ext][query]',
+		path: path.resolve(__dirname, "dist"),
+		filename: "bundle.js",
+		publicPath: "/",
+		assetModuleFilename: "assets/images/[hash][ext][query]",
 	},
-	mode: 'development',
+	mode: "development",
 	resolve: {
-		extensions: ['.js', '.jsx'],
+		extensions: [".js", ".jsx"],
 		alias: {
-			'@components': path.resolve(__dirname, 'src/components/'),
-			'@styles': path.resolve(__dirname, 'src/styles/'),
-			'@fonts': path.resolve(__dirname, 'src/assets/fonts/'),
-			'@images': path.resolve(__dirname, 'src/assets/images/'),
-			'@pages': path.resolve(__dirname, 'src/pages/'),
-			'@hooks': path.resolve(__dirname, 'src/hooks/'),
+			"@components": path.resolve(__dirname, "src/components/"),
+			"@styles": path.resolve(__dirname, "src/styles/"),
+			"@fonts": path.resolve(__dirname, "src/assets/fonts/"),
+			"@images": path.resolve(__dirname, "src/assets/images/"),
+			"@pages": path.resolve(__dirname, "src/pages/"),
+			"@hooks": path.resolve(__dirname, "src/hooks/"),
 		},
 	},
 	module: {
@@ -32,35 +31,35 @@ module.exports = {
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: {
-					loader: 'babel-loader',
+					loader: "babel-loader",
 				},
 			},
 			{
 				test: /\.html$/,
 				use: [
 					{
-						loader: 'html-loader',
+						loader: "html-loader",
 					},
 				],
 			},
 			{
 				test: /\.(sass|scss|css)$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
+				use: ["style-loader", "css-loader", "sass-loader"],
 			},
 			{
 				test: /\.(png|svg|jpg|gif)$/,
-				type: 'asset',
+				type: "asset",
 			},
 			{
 				test: /\.(woff|woff2)$/,
 				use: {
-					loader: 'url-loader',
+					loader: "url-loader",
 					options: {
 						limit: 10000,
-						mimetype: 'application/font-woff',
-						name: '[name].[contenthash].[ext]',
-						outputPath: './assets/fonts/',
-						publicPath: '../assets/fonts/',
+						mimetype: "application/font-woff",
+						name: "[name].[contenthash].[ext]",
+						outputPath: "./assets/fonts/",
+						publicPath: "../assets/fonts/",
 						esModule: false,
 					},
 				},
@@ -69,24 +68,18 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './public/index.html',
-			filename: './index.html',
+			template: "./public/index.html",
+			filename: "./index.html",
+			favicon: "./src/assets/images/favicon/favicon-16x16.png",
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'assets/[name].css',
+			filename: "assets/[name].css",
 		}),
 		new Dotenv(),
-		/* new CopyPlugin({
-			patterns: [
-				{ from: 'public/manifest.json', to: '' },
-				{ from: 'public/service-worker.js', to: '' },
-				{ from: 'public/icon.png', to: 'assets' },
-			],
-		}), */
 	],
 	devServer: {
 		historyApiFallback: true,
-		allowedHosts: path.join(__dirname, 'dist'),
+		allowedHosts: path.join(__dirname, "dist"),
 		compress: true,
 		port: 8080,
 	},
@@ -94,4 +87,4 @@ module.exports = {
 		minimize: true,
 		minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
 	},
-}
+};
