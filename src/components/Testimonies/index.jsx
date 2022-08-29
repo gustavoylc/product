@@ -1,6 +1,4 @@
 import React from "react";
-import { TestimonyCard } from "@components/TestimonyCard";
-
 export const Testimonies = ({children}) => {
   
 	return (

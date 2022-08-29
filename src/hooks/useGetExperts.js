@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const useGetExperts = () => {
-	const [loading, setLoading] = useState(true);
 	const [experts, setExperts] = useState([]);
 	const abilities = [
 		"I can take care of your pitch",
@@ -23,7 +22,6 @@ const useGetExperts = () => {
 					};
 				});
 				setExperts(pictures);
-				setLoading(false);
 			})
 			.catch((err) => console.error(err));
 	}, []);
