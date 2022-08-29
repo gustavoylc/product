@@ -13,7 +13,6 @@ const GetStartedContent = () => {
 
 			<Button
 				text={'Get started'}
-				classSize={'button'}
 			/>
 			<a href='http://youtube.com'>
 				<MdPlayArrow /> Watch the Video

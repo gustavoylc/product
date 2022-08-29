@@ -3,9 +3,7 @@ import { Button } from "@components/Button";
 
 const PricingCard = ({ typeCard, price }) => {	
 	return (
-		<div
-			className={`pricingCard ${price === 10 && "selected"}`}
-		>
+		<div className={`pricingCard ${price === 10 && "selected"}`}>
 			<h3>{typeCard}</h3>
 			<p>Brief price description</p>
 			<div className="pricingCard__price">
@@ -19,7 +17,7 @@ const PricingCard = ({ typeCard, price }) => {
 			<p>Landing Pages</p>
 			<Button
 				text={"Order Now"}
-				classSize={"button"}
+				classSize="button button__invert"
 			/>
 		</div>
 	);
