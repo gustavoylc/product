@@ -2,7 +2,7 @@ import React from 'react'
 
 const Management = ({ children }) => {
 	return (
-		<article className='Management'>
+		<article className='management'>
 			{children}
 			<h4>Effortless Validation for</h4>
 			<h2>Management</h2>

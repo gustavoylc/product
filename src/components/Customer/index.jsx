@@ -3,7 +3,7 @@ import { MdCheck } from 'react-icons/md'
 
 const Customer = ({ children }) => {
 	return (
-		<article className='Customer'>
+		<article className='customer'>
 			{children}
 			<h4>Easier decision making for</h4>
 			<h2>Customer Support</h2>
@@ -11,15 +11,15 @@ const Customer = ({ children }) => {
 				The Myspace page defines the individual, his or her characteristics,
 				traits, personal choices and the overall personality of the person
 			</p>
-			<div className='Customer__container'>
+			<div className='customer__container'>
 				<div>
-					<MdCheck className='Customer__container--check Customer__container--bgc-orange' />
+					<MdCheck className='customer__container--check customer__container--bgc-orange' />
 				</div>
 				<div>
 					<p>Never worry about overpaying for your energy again</p>
 				</div>
 				<div>
-					<MdCheck className='Customer__container--check Customer__container--bgc-red' />
+					<MdCheck className='customer__container--check customer__container--bgc-red' />
 				</div>
 				<div>
 					<p>
@@ -28,7 +28,7 @@ const Customer = ({ children }) => {
 					</p>
 				</div>
 				<div>
-					<MdCheck className='Customer__container--check Customer__container--bgc-blue' />
+					<MdCheck className='customer__container--check customer__container--bgc-blue' />
 				</div>
 				<div>
 					<p>We track the markets daily and know where the savings</p>

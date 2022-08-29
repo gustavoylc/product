@@ -3,7 +3,7 @@ import React from 'react'
 
 export const GetStarted = ({children}) => {
 	return (
-		<section className='GetStarted'>
+		<section className='getStarted'>
 		{children}
 		</section>
 	)

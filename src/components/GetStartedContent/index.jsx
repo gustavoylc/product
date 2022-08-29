@@ -4,7 +4,7 @@ import { MdPlayArrow } from 'react-icons/md'
 
 const GetStartedContent = () => {
 	return (
-		<article className='GetStartedContent'>
+		<article className='getStartedContent'>
 			<h2>Work at the speed of the thought</h2>
 			<p>
 				Tools, tutorials, design and innovation experts, all in one place! The
@@ -13,7 +13,7 @@ const GetStartedContent = () => {
 
 			<Button
 				text={'Get started'}
-				classSize={'Button'}
+				classSize={'button'}
 			/>
 			<a href='http://youtube.com'>
 				<MdPlayArrow /> Watch the Video

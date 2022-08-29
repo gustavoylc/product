@@ -3,9 +3,9 @@ import logo from '@images/favicon/favicon-32x32.png'
 
 const Logo = () => {
 	return (
-		<div className='Logo'>
+		<div className='logo'>
 			<a href='http://localhost:8080/'>
-				<div className='Logo__container'>
+				<div className='logo__container'>
 					<img
 						src={logo}
 						alt='Logo'

@@ -5,15 +5,15 @@ import roundup from '@images/roundup.svg'
 
 const WhyUs = ({children}) => {
 	return (
-		<section className='WhyUs'>
+		<section className='whyUs'>
 			<h2>Product was Built Specifically for You</h2>
 			{children}
 			<Button
 				text={'SIGN UP NOW'}
-				classSize={'Button Button__SignUp'}
+				classSize={'button button__signUp'}
 			></Button>
 			<img
-				className='WhyUs__end'
+				className='whyUs__end'
 				src={roundup}
 			/>
 		</section>

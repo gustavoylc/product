@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Picture = ({ picture, classSize='Picture' }) => {
+const Picture = ({ picture, classSize='picture' }) => {
 	return (
-		<figure className='Picture__container'>
+		<figure className='picture__container'>
 			<img
 				className={classSize}
 				src={picture}

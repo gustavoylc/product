@@ -5,7 +5,7 @@ const Menu = () => {
 	return (
 		<MdMenu
 			size={30}
-			className='Menu'
+			className='menu'
 		/>
 	)
 }

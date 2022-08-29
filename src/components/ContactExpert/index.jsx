@@ -4,10 +4,10 @@ import { Button } from '@components/Button'
 
 const ContactExpert = ({ experts }) => {
 	return (
-		<article className='ContactExpert'>
-			<div className='ContactExpert__text'>
+		<article className='contactExpert'>
+			<div className='contactExpert__text'>
 				<img
-					className='ContactExpert__start'
+					className='contactExpert__start'
 					src={rounddown}
 				/>
 				<h2>Quick & Easy Process</h2>
@@ -16,18 +16,18 @@ const ContactExpert = ({ experts }) => {
 					prototyping, marketing strategy, landing page, UX/UI?
 				</p>
 			</div>
-			<div className='ContactExpert__container'>
+			<div className='contactExpert__container'>
 				{experts.map((exp, index) =>
 					index % 2 === 0 ? (
 						<div
 							key={exp.id}
-							className='ContactExpert__images'
+							className='contactExpert__images'
 						>
 							<img
 								src={exp.image}
 								className={`${
-									(index === 0 && 'ContactExpert__images--bc-red') ||
-									(index === 2 && 'ContactExpert__images--bc-blue')
+									(index === 0 && 'contactExpert__images--bc-red') ||
+									(index === 2 && 'contactExpert__images--bc-blue')
 								}`}
 							/>
 							<div>
@@ -37,7 +37,7 @@ const ContactExpert = ({ experts }) => {
 					) : (
 						<div
 							key={exp.id}
-							className='ContactExpert__images'
+							className='contactExpert__images'
 						>
 							<div>
 								<p>{exp.ability}</p>
@@ -45,8 +45,8 @@ const ContactExpert = ({ experts }) => {
 							<img
 								src={exp.image}
 								className={`${
-									(index === 1 && 'ContactExpert__images--bc-green') ||
-									(index === 3 && 'ContactExpert__images--bc-magenta')
+									(index === 1 && 'contactExpert__images--bc-green') ||
+									(index === 3 && 'contactExpert__images--bc-magenta')
 								}`}
 							/>
 						</div>
@@ -55,7 +55,7 @@ const ContactExpert = ({ experts }) => {
 			</div>
 			<Button
 				text={'Contact our expert'}
-				classSize={'Button Button__ContactExpert'}
+				classSize={'button button__contactExpert'}
 			></Button>
 		</article>
 	)

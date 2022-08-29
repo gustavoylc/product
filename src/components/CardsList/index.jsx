@@ -1,11 +1,11 @@
-import React from 'react'
-import { Card } from '@components/Card'
+import React from "react";
+import { Card } from "@components/Card";
 
-const CardsList = ({ images }) => {	
+const CardsList = ({ images }) => {
 	return (
 		<div>
-			<div className='CardsList'>
-				{images.map(image => (
+			<div className="cardsList">
+				{images.map((image) => (
 					<Card
 						key={image}
 						image={image}
@@ -13,7 +13,7 @@ const CardsList = ({ images }) => {
 				))}
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export { CardsList }
+export { CardsList };

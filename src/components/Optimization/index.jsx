@@ -2,7 +2,7 @@ import React from 'react'
 
 const Optimization = ({children}) => {
 	return (
-		<article className='Optimization'>
+		<article className='optimization'>
 			{children}
 			<h4>Optimization for</h4>
 			<h2>Collaborative</h2>

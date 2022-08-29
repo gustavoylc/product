@@ -4,11 +4,11 @@ import { Menu } from '@components/Menu'
 
 const NavBar = () => {
 	return (
-		<nav className='NavBar'>
-			<div className='NavBar__Logo'>
+		<nav className='navBar'>
+			<div className='navBar__logo'>
 				<Logo />
 			</div>
-			<div className='NavBar__Menu'>
+			<div className='navBar__menu'>
 				<Menu />
 			</div>
 		</nav>
