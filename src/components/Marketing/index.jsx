@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button } from '@components/Button'
-import {Picture} from '@components/Picture'
 import cta from "@images/cta.png";
 
 export const Marketing = () => {

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { NavBar } from "@pages/NavBar";
 import { Product } from "@pages/Product";
+import { Footer } from "@pages/Footer";
 import { Logo } from "@components/Logo";
 import { Menu } from "@components/Menu";
 import { GetStarted } from "@components/GetStarted";
@@ -17,6 +18,7 @@ import { useGetExperts } from "@hooks/useGetExperts";
 import { useGetTechImages } from "@hooks/useGetTechImages";
 import { Pricing } from "@components/Pricing";
 import { Marketing } from "@components/Marketing";
+import { SocialMedia } from "@components/SocialMedia";
 
 import hero from "@images/hero.png";
 import getjob from "@images/getjob.png";
@@ -110,6 +112,10 @@ const App = () => {
 				</Testimonies>
 				<Marketing />
 			</Product>
+			<Footer>
+				<Logo></Logo>
+				<SocialMedia/>
+			</Footer>
 		</Fragment>
 	);
 };
