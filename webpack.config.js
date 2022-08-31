@@ -1,9 +1,9 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const Dotenv = require('dotenv-webpack')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
 	entry: "./src/index.jsx",
@@ -11,7 +11,7 @@ module.exports = {
 		path: path.resolve(__dirname, "dist"),
 		filename: "bundle.js",
 		publicPath: "/",
-		assetModuleFilename: "assets/images/[hash][ext][query]",
+		assetModuleFilename: "assets/images/[name][ext][query]",
 	},
 	mode: "development",
 	resolve: {
@@ -48,16 +48,16 @@ module.exports = {
 			},
 			{
 				test: /\.(png|svg|jpg|gif)$/,
-				type: "asset",
+				type: "asset/resource",
 			},
 			{
-				test: /\.(woff|woff2)$/,
+				test: /\.(woff|woff2|eot|ttf|svg)$/,
 				use: {
 					loader: "url-loader",
 					options: {
 						limit: 10000,
 						mimetype: "application/font-woff",
-						name: "[name].[contenthash].[ext]",
+						name: "[name].[ext]",
 						outputPath: "./assets/fonts/",
 						publicPath: "../assets/fonts/",
 						esModule: false,
@@ -75,13 +75,20 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: "assets/[name].css",
 		}),
-		new Dotenv(),
+		new CopyPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, "src", "assets/images"),
+					to: "assets/images",
+				},
+			],
+		}),
 	],
 	devServer: {
 		historyApiFallback: true,
 		allowedHosts: path.join(__dirname, "dist"),
 		compress: true,
-		port: 8080,
+		port: 5500,
 	},
 	optimization: {
 		minimize: true,
