@@ -1,3 +1,3 @@
 # Product
 
-Web template about "Product", developed with React.
+Layout about "Product", developed with React.

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { NavBar } from "@pages/NavBar";
 import { Product } from "@pages/Product";
 import { Footer } from "@pages/Footer";
@@ -37,9 +37,9 @@ const App = () => {
 	const images = useGetTechImages();
 	const stars = ["full", "full", "full", "full", "empty"];
 	const rol = ["Designer", "FrontEnd", "Analyst"];
-
+	
 	return (
-		<Fragment>
+		<div className="app">
 			<NavBar>
 				<Logo></Logo>
 				<Menu></Menu>
@@ -49,6 +49,7 @@ const App = () => {
 					<Picture picture={hero} />
 					<GetStartedContent />
 				</GetStarted>
+
 				<WhyUs>
 					<Skill>
 						<Picture
@@ -83,20 +84,27 @@ const App = () => {
 						<p>Personal choices and the overall personality of the person</p>
 					</Skill>
 				</WhyUs>
+
 				<Management>
 					<Picture picture={getjob} />
 				</Management>
+
 				<Customer>
 					<Picture picture={comfort} />
 				</Customer>
+
 				<Optimization>
 					<Picture picture={market} />
 				</Optimization>
+
 				<ContactExpert experts={experts} />
+
 				<Strategies>
 					<CardsList images={images} />
 				</Strategies>
+
 				<Pricing />
+
 				<Testimonies>
 					{experts.map(
 						(client, i) =>
@@ -110,13 +118,14 @@ const App = () => {
 							)
 					)}
 				</Testimonies>
+
 				<Marketing />
 			</Product>
 			<Footer>
 				<Logo></Logo>
-				<SocialMedia/>
+				<SocialMedia />
 			</Footer>
-		</Fragment>
+		</div>
 	);
 };
 
