@@ -19,7 +19,6 @@ module.exports = {
 		alias: {
 			"@components": path.resolve(__dirname, "src/components/"),
 			"@styles": path.resolve(__dirname, "src/styles/"),
-			"@fonts": path.resolve(__dirname, "src/assets/fonts/"),
 			"@images": path.resolve(__dirname, "src/assets/images/"),
 			"@pages": path.resolve(__dirname, "src/pages/"),
 			"@hooks": path.resolve(__dirname, "src/hooks/"),
@@ -49,20 +48,6 @@ module.exports = {
 			{
 				test: /\.(png|svg|jpg|gif)$/,
 				type: "asset/resource",
-			},
-			{
-				test: /\.(woff|woff2|eot|ttf|svg)$/,
-				use: {
-					loader: "url-loader",
-					options: {
-						limit: 10000,
-						mimetype: "application/font-woff",
-						name: "[name].[ext]",
-						outputPath: "./assets/fonts/",
-						publicPath: "../assets/fonts/",
-						esModule: false,
-					},
-				},
 			},
 		],
 	},

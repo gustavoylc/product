@@ -1,95 +1,5 @@
 @import './normalize.css'
 
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-brands-400.eot')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-brands-400.woff2') format('woff2')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-brands-400.woff') format('woff')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-brands-400.ttf') format('truetype')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-brands-400.svg#Poppins') format('svg')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-regular-400.eot')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-regular-400.woff2') format('woff2')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-regular-400.woff') format('woff')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-regular-400.ttf') format('truetype')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 400
-	src: url('@fonts/fa-regular-400.svg#Poppins') format('svg')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 900
-	src: url('@fonts/fa-solid-900.eot')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 900
-	src: url('@fonts/fa-solid-900.woff2') format('woff2')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 900
-	src: url('@fonts/fa-solid-900.woff') format('woff')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 900
-	src: url('@fonts/fa-solid-900.ttf') format('truetype')
-
-@font-face
-	font-family: 'Poppins'
-	font-style: normal
-	font-weight: 900
-	src: url('@fonts/fa-solid-900.svg#Poppins') format('svg')
-
 $blue-primary: #02897a
 $blue-dark: #027366
 $blue-light: #f6faff
@@ -97,13 +7,20 @@ $white-primary: #ffffff
 $white-secondary: #e4e9f3
 $black-primary: #1f2e35
 $black-secondary: #30444e
-$yellow-star : #F3CD03
+$yellow-star: #F3CD03
 
 body
 	font-family: 'Poppins', sans-serif
 	background-color: $white-primary
 	color: $black-primary
-
+	overscroll-behavior: none
 p
 	line-height: 1.6
 
+.app
+	overflow: hidden
+	@keyframes fadeIn  
+		0%
+			transform: translateY(-10px)
+		100%
+			transform: translateY(0)
