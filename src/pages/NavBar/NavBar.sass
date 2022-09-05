@@ -1,14 +1,46 @@
 .navBar
-  height: 70px
-  display: grid
-  grid-template-columns: repeat(2, 1fr)
-  grid-template-rows: 1fr
+  position: fixed
+  height: 50px
+  background-color: $white-primary
+  width: 100%
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
   align-items: center
   box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%)
+  z-index: 10
 
 .navBar__logo
   margin-left: 20px
 
-.navBar__menu
-  text-align: end
-  margin-right: 20px
+.navBar__menu  
+  display: none
+  @include media(tablet)
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: end
+    width: 100%
+    &--list
+      display: flex
+      flex-direction: row
+      list-style: none
+      & h4
+        margin: 0 5px
+        @include media(desktop-s)
+          margin: 0 15px
+      & a
+          text-decoration: none
+          color: $black-primary
+    & div
+      margin-right: 5px
+      @include media(desktop-s)
+        margin-right: 8px
+    & div:nth-child(2)        
+      margin-left: 5px
+    
+  &--burger
+    margin-right: 20px
+    @include media(tablet)
+      display: none

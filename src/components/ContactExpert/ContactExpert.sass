@@ -12,11 +12,21 @@
     z-index: -1
   &__container
     margin: 0 20px 30px 20px
+    @include media(tablet)
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: center
   &__images
     display: flex
     flex-direction: row
     align-items: center
+    justify-content: center
     margin: 10px 0
+    @include media(tablet)
+      margin: 20px
+      &--inverted
+        flex-direction: row-reverse
     & div
       margin: 0 10px
       border-radius: 50px
