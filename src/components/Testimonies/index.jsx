@@ -1,6 +1,5 @@
 import React from "react";
-export const Testimonies = ({children}) => {
-  
+export const Testimonies = ({ children }) => {
 	return (
 		<div className="testimonies">
 			<div className="testimonies__container">
@@ -10,7 +9,7 @@ export const Testimonies = ({children}) => {
 					of Classical physics: Newtonian mechanics
 				</p>
 			</div>
-			{children}
+			<div className="testimonies__content">{children}</div>
 		</div>
 	);
 };

@@ -21,6 +21,8 @@ export const Footer = ({ children }) => {
 						<a href="#">FAQ</a>
 					</li>
 				</ul>
+			</div>
+			<div>
 				<h4>Legal Stuff</h4>
 				<ul className="footer__lists">
 					<li>
@@ -39,7 +41,10 @@ export const Footer = ({ children }) => {
 			</div>
 			<div className="footer__email">
 				<h4>Knowing you´re always on the best energy deal. </h4>
-				<input type="text" placeholder="Enter email"/>
+				<input
+					type="text"
+					placeholder="Enter email"
+				/>
 				<Button text={"Sign up Now"} />
 			</div>
 			<h5>Made With Love By Product All Right Reserved</h5>

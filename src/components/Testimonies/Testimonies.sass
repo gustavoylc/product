@@ -3,3 +3,9 @@
     &__container
         margin: 10px 20px
         text-align: center
+        @include media(tablet)
+            margin: auto 25%
+    @include media(tablet)
+        &__content
+            display: flex
+            flex-direction: row

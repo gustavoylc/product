@@ -1,13 +1,13 @@
-import React from 'react'
-import rounddown from '@images/rounddown.svg'
-import { Button } from '@components/Button'
+import React from "react";
+import rounddown from "@images/rounddown.svg";
+import { Button } from "@components/Button";
 
 const ContactExpert = ({ experts }) => {
 	return (
-		<article className='contactExpert'>
-			<div className='contactExpert__text'>
+		<article className="contactExpert">
+			<div className="contactExpert__text">
 				<img
-					className='contactExpert__start'
+					className="contactExpert__start"
 					src={rounddown}
 				/>
 				<h2>Quick & Easy Process</h2>
@@ -16,18 +16,21 @@ const ContactExpert = ({ experts }) => {
 					prototyping, marketing strategy, landing page, UX/UI?
 				</p>
 			</div>
-			<div className='contactExpert__container'>
+			<div className="contactExpert__container">
 				{experts.map((exp, index) =>
 					index % 2 === 0 ? (
 						<div
 							key={exp.id}
-							className='contactExpert__images'
+							className={`contactExpert__images ${
+								index > 1 && "contactExpert__images--inverted"
+							}
+							`}
 						>
 							<img
 								src={exp.image}
 								className={`${
-									(index === 0 && 'contactExpert__images--bc-red') ||
-									(index === 2 && 'contactExpert__images--bc-blue')
+									(index === 0 && "contactExpert__images--bc-red") ||
+									(index === 2 && "contactExpert__images--bc-blue")
 								}`}
 							/>
 							<div>
@@ -37,7 +40,10 @@ const ContactExpert = ({ experts }) => {
 					) : (
 						<div
 							key={exp.id}
-							className='contactExpert__images'
+							className={`contactExpert__images ${
+								index > 1 && "contactExpert__images--inverted"
+							}
+							`}
 						>
 							<div>
 								<p>{exp.ability}</p>
@@ -45,8 +51,8 @@ const ContactExpert = ({ experts }) => {
 							<img
 								src={exp.image}
 								className={`${
-									(index === 1 && 'contactExpert__images--bc-green') ||
-									(index === 3 && 'contactExpert__images--bc-magenta')
+									(index === 1 && "contactExpert__images--bc-green") ||
+									(index === 3 && "contactExpert__images--bc-magenta")
 								}`}
 							/>
 						</div>
@@ -54,11 +60,11 @@ const ContactExpert = ({ experts }) => {
 				)}
 			</div>
 			<Button
-				text={'Contact our expert'}
-				classSize={'button button__contactExpert'}
+				text={"Contact our expert"}
+				classSize={"button button__contactExpert"}
 			></Button>
 		</article>
-	)
-}
+	);
+};
 
-export { ContactExpert }
+export { ContactExpert };
