@@ -24,3 +24,36 @@ p
 			transform: translateY(-10px)
 		100%
 			transform: translateY(0)
+
+@mixin displayflexreverse
+	display: flex
+	flex-direction: row-reverse
+	justify-content: center
+
+@mixin displayflexrow
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center  
+
+@mixin displayflexcolumn
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+@mixin scrollbar-x
+	display: flex
+	justify-content: space-evenly
+	overflow-x: scroll
+	overscroll-behavior-x: contain
+	scroll-snap-type: x mandatory
+	align-items: center
+	gap: 10px
+	padding: 0 10px
+	&::-webkit-scrollbar
+		-webkit-appearance: none
+		height: 5px
+	&::-webkit-scrollbar-thumb
+		background-color: #797979
+		border-radius: 5px

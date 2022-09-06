@@ -1,12 +1,8 @@
 .getStarted
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  @include displayflexcolumn
   margin: 0 20px 80px 20px
   animation: 0.5s fadeIn 0.5s cubic-bezier(0.12, 0, 0.39, 0)
   @include media(tablet)
     flex-direction: row-reverse
-
     & img
       height: 350px

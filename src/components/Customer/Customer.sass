@@ -20,8 +20,6 @@
       background-color: #4d8dff
   @include media(tablet)
     &__content
-      display: flex
-      flex-direction: row
-      justify-content: center
+      @include displayflexrow
       & img
         height: 250px

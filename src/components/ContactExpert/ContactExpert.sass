@@ -13,16 +13,11 @@
   &__container
     margin: 0 auto 30px auto
     @include media(tablet)
-      display: flex
-      flex-direction: row
+      @include displayflexrow
       flex-wrap: wrap
-      justify-content: center
       max-width: 1100px
   &__images
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: center
+    @include displayflexrow
     margin: 10px 0
     @include media(tablet)
       margin: 20px
