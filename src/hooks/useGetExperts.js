@@ -8,9 +8,10 @@ const useGetExperts = () => {
 		"I can help marketing strategy",
 		"I can prototype your app",
 	];
+	const API = process.env.API;
 
 	useEffect(() => {
-		fetch("https://randomuser.me/api/?results=4")
+		fetch(API + "?results=4")
 			.then((response) => response.json())
 			.then((expert) => {
 				const pictures = expert.results.map((item, index) => {
